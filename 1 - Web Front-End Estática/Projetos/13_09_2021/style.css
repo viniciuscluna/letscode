@@ -68,3 +68,9 @@ html {
     display: inline;
     text-align: initial;
 }
+
+.tabela th, td {
+    table-layout: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
