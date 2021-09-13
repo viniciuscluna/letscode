@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex: content;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 100vw;
+    
+}
+
+*{
+    margin: 0px;
+}
+
+.element {
+    width: 100px;
+    min-height: 10px;
+    max-height: 50px;
+    border: 1px solid black;
+}
+
+#div1 {
+    background-color: green;
+}
+
+#div2 {
+    background-color: pink;
+}
+
+#div3 {
+    background-color: blue;
+}
+
+#div4 {
+    background-color: purple;
+}
