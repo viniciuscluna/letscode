@@ -7,6 +7,7 @@ let palavraEscolhida = []
 let qtdCaracteres = 0
 let letrasEscolhidas = []
 let palavraDecrifrada = []
+
 fetch('animais.txt')
     .then(response => response.text())
     .then(text => {
@@ -22,6 +23,9 @@ fetch('animais.txt')
 const btnIniciar = document.getElementById('btnIniciar')
 const txtForca = document.getElementById('txtForca')
 const alerta = document.getElementById('mensagemAlerta')
+const usuario = document.getElementById('msgUsuario')
+
+usuario.innerText = `Olá : ${prompt('Digite seu nome:')}` 
 
 btnIniciar.onclick = () => {
     CarregarForca()
