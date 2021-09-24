@@ -61,17 +61,18 @@ const RecarregarCampos = () => {
 }
 
 const CarregarForca = () => {
-    palavraEscolhida = listaPalavras[escolherPalavraAleatoria(0, listaPalavras.length)].toUpperCase()
+    palavraEscolhida = listaPalavras[escolherPalavraAleatoria(0, listaPalavras.length)].toUpperCase().replace('\r','')
     qtdCaracteres = palavraEscolhida.length
     letrasEscolhidas = palavraEscolhida.split('')
     palavraDecrifrada = letrasEscolhidas.map(() => "_")
     letrasJaEscolhidas = []
     RecarregarCampos()
+    alerta.innerHTML = "Insira uma letra abaixo e clique em 'Verificar Letra'!"
 }
 const gerarTextoFinal = (texto) => {
     let retorno = ''
-    for (let t in texto) {
-        retorno = retorno + `\n => ${texto[t]}`
+    for (let t of texto) {
+        retorno = retorno + `\n => ${t}`
     }
     return retorno
 }
@@ -84,6 +85,7 @@ const VerificarVencimento = () => {
         document.getElementById('mensagem').innerText = ``
         document.getElementById('mensagemForca').innerText = ``
         document.getElementById('mensagemForcaEscolhidas').innerText = ``
+        alerta.innerHTML = 'Renicie o jogo clicando acima'
     }
 }
 
