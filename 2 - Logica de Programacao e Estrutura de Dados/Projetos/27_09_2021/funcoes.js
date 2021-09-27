@@ -4,10 +4,11 @@ export const escolherPalavraAleatoria = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-export const verificarLetraForca = (letra, palavraEscolhida, palavraDecrifrada, letrasJaEscolhidas) => {
+export const verificarLetraForca = (letra, palavraEscolhida, palavraDecrifrada, letrasJaEscolhidas, qtdVidas) => {
     if (palavraDecrifrada.includes(letra) || letrasJaEscolhidas.includes(letra)) {
         return {
             Sucesso: false,
+            QtdVidas: qtdVidas,
             Mensagem: 'Letra já escolhida!!'
         }
     }
@@ -15,13 +16,16 @@ export const verificarLetraForca = (letra, palavraEscolhida, palavraDecrifrada, 
         inserirLetraForca(letra, palavraEscolhida, palavraDecrifrada)
         return {
             Sucesso: true,
+            QtdVidas: qtdVidas,
             Mensagem: `Letra (${letra}) encontrada!`
         }
     }
     else {
         letrasJaEscolhidas.push(letra)
+        qtdVidas --;
         return {
             Sucesso: false,
+            QtdVidas: qtdVidas,
             Mensagem: `Letra (${letra}) não encontrada :(`
         }
     }
@@ -44,4 +48,11 @@ const inserirLetraForca = (letra, palavraEscolhida, palavraDecrifrada) => {
             palavraDecrifrada[idx] = letraIdx
         }
     })
+}
+
+
+export const  gerarImagemForca = (vidas) => {
+    if(vidas > 0)
+    return `assets/imgForca/${vidas}.png`
+    else return `assets/imgForca/0.png`
 }

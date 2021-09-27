@@ -1,4 +1,4 @@
-import { escolherPalavraAleatoria, validarLetraForca, verificarLetraForca } from './funcoes.js'
+import { escolherPalavraAleatoria, validarLetraForca, verificarLetraForca, gerarImagemForca } from './funcoes.js'
 
 
 let listaPalavras = []
@@ -7,6 +7,8 @@ let palavraEscolhida = []
 let qtdCaracteres = 0
 let letrasEscolhidas = []
 let palavraDecrifrada = []
+let qtdVidas = 6
+
 
 fetch('animais.txt')
     .then(response => response.text())
@@ -24,8 +26,9 @@ const btnIniciar = document.getElementById('btnIniciar')
 const txtForca = document.getElementById('txtForca')
 const alerta = document.getElementById('mensagemAlerta')
 const usuario = document.getElementById('msgUsuario')
-
-usuario.innerText = `Olá : ${prompt('Digite seu nome:')}` 
+const imgForca = document.getElementById('imgForca')
+imgForca.setAttribute('src', gerarImagemForca(qtdVidas))
+//usuario.innerText = `Olá : ${prompt('Digite seu nome:')}`
 
 btnIniciar.onclick = () => {
     CarregarForca()
@@ -42,11 +45,26 @@ btnInserir.onclick = () => {
     txtForca.value = ''
     txtForca.focus()
     VerificarVencimento()
+    imgForca.setAttribute('src', gerarImagemForca(qtdVidas))
+    if (qtdVidas === 0)
+        tratarPerdeuJogo()
 }
+
+const tratarPerdeuJogo = () => {
+    alert('Você perdeu.... ')
+    txtForca.style = 'display:none'
+    btnInserir.style = 'display:none'
+    document.getElementById('mensagem').innerText = ``
+    document.getElementById('mensagemForca').innerText = ``
+    document.getElementById('mensagemForcaEscolhidas').innerText = ``
+    alerta.innerHTML = 'Você perdeu, caso queira jogar novamente, clique acima.'
+}
+
 const InserirValor = () => {
     const letra = txtForca.value
     if (validarLetraForca(letra)) {
-        var resultado = verificarLetraForca(letra.toUpperCase(), letrasEscolhidas, palavraDecrifrada, letrasJaEscolhidas)
+        var resultado = verificarLetraForca(letra.toUpperCase(), letrasEscolhidas, palavraDecrifrada, letrasJaEscolhidas, qtdVidas)
+        qtdVidas = resultado.QtdVidas
         alerta.innerText = resultado.Mensagem
     }
     else {
@@ -57,14 +75,16 @@ const InserirValor = () => {
 const RecarregarCampos = () => {
     document.getElementById('mensagem').innerText = `Sua animal tem ${qtdCaracteres} letras!`
     document.getElementById('mensagemForca').innerText = `Sua forca nesse momento: ${palavraDecrifrada.join(' ')}`
-    document.getElementById('mensagemForcaEscolhidas').innerText = `Letras não encontradas: ${letrasJaEscolhidas.join(',')}`
+    document.getElementById('mensagemForcaEscolhidas').innerText = `Letras não encontradas: ${letrasJaEscolhidas.join(',')}, Vidas Restantes: (${qtdVidas})`
+    imgForca.setAttribute('src', gerarImagemForca(qtdVidas))
 }
 
 const CarregarForca = () => {
-    palavraEscolhida = listaPalavras[escolherPalavraAleatoria(0, listaPalavras.length)].toUpperCase().replace('\r','')
+    palavraEscolhida = listaPalavras[escolherPalavraAleatoria(0, listaPalavras.length)].toUpperCase().replace('\r', '')
     qtdCaracteres = palavraEscolhida.length
     letrasEscolhidas = palavraEscolhida.split('')
     palavraDecrifrada = letrasEscolhidas.map(() => "_")
+    qtdVidas = 6
     letrasJaEscolhidas = []
     RecarregarCampos()
     alerta.innerHTML = "Insira uma letra abaixo e clique em 'Verificar Letra'!"
