@@ -28,13 +28,16 @@ const alerta = document.getElementById('mensagemAlerta')
 const usuario = document.getElementById('msgUsuario')
 const imgForca = document.getElementById('imgForca')
 imgForca.setAttribute('src', gerarImagemForca(qtdVidas))
-//usuario.innerText = `Olá : ${prompt('Digite seu nome:')}`
+const nomeJogador = prompt('Digite seu nome:')
+if (nomeJogador)
+    usuario.innerText = `Olá : ${nomeJogador}`
 
 btnIniciar.onclick = () => {
     CarregarForca()
     txtForca.focus()
     txtForca.style = ''
     btnInserir.style = ''
+    btnIniciar.innerText = 'Reiniciar'
 }
 
 const btnInserir = document.getElementById('btnInserir')
