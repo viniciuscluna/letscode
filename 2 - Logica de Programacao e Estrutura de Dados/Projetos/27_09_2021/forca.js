@@ -54,7 +54,7 @@ btnInserir.onclick = () => {
 }
 
 const tratarPerdeuJogo = () => {
-    alert('Você perdeu.... ')
+    alert(`Você perdeu.... \n A palavra era: ${palavraEscolhida}`)
     txtForca.style = 'display:none'
     btnInserir.style = 'display:none'
     document.getElementById('mensagem').innerText = ``
