@@ -1,0 +1,142 @@
+[
+    {
+        "Id": 1,
+        "Nome": "Banco",
+        "Descricao" :"Peça utilizada para acomodar passageiro.",
+        "Motor" : false,
+        "ValorMedio" : 1000
+    },
+    {
+        "Id": 2,
+        "Nome": "Correia",
+        "Descricao" :"Uma correia dentada, corrente de sincronização ou cambelt é uma parte de um motor de combustão interna que sincroniza a rotação do virabrequim e do eixo de comando para que as válvulas do motor abram e fechem nos momentos adequados durante os cursos de admissão e escape de cada cilindro.",
+        "Motor" : true,
+        "ValorMedio" : 50
+    },
+    {
+        "Id": 3,
+        "Nome": "Volante",
+        "Descricao" :"O volante é a interface entre o condutor e a direção de um automóvel ou outro veículo. Consiste tipicamente num aro circular, a ser manipulado pelo condutor, cujo movimento de rotação (esterço) é convertido em movimentos solidários com as rodas.",
+        "Motor" : false,
+        "ValorMedio" : 100
+    },
+    {
+        "Id": 4,
+        "Nome": "Roda",
+        "Descricao" :"A roda é uma das seis máquinas simples com vastas aplicações no transporte e em máquinas mecânicas, caracterizada pelo movimento rotativo no seu interior. A roda transmite de maneira amplificada para o eixo de rotação qualquer força aplicada na sua borda, reduzindo a transmissão tanto da velocidade quanto da distância que foram aplicadas. Similarmente, a roda transmite de maneira reduzida para a borda qualquer força aplicada no seu eixo de rotação, amplificando a transmissão tanto da velocidade quanto da distância que foram aplicadas.",
+        "Motor" : false,
+        "ValorMedio" : 200
+    },
+    {
+        "Id": 5,
+        "Nome": "Pneu",
+        "Descricao" :"Um pneumático (do latim pneumatĭcus, por sua vez do grego πνευματικός, derivado de πνεῦμα sopro), mais conhecido por pneu, é um artefacto circular feito de borracha, para uso em automóveis, caminhões, aviões, motos, bicicletas, etc. Na maioria das aplicações, é inflado com gases. Em algumas aplicações específicas, por exemplo em máquinas agrícolas, pode ser parcialmente preenchido com água, para melhorar a tração e reduzir a patinagem.",
+        "Motor" : false,
+        "ValorMedio" : 400
+    },
+    {
+        "Id": 6,
+        "Nome": "Alternador",
+        "Descricao" :"Alternador é uma máquina que transforma energia mecânica em energia elétrica. É utilizado em diversas áreas, desde geradores de energia portáteis, em automóveis e até nas usinas hidrelétricas",
+        "Motor" : true,
+        "ValorMedio" : 600
+    },
+    {
+        "Id": 7,
+        "Nome": "Cambio manual",
+        "Descricao" :"O câmbio manual é um sistema de engrenagens e com alavanca que permite ao condutor do automóvel trocá-las manualmente, em oposição ao sistema de câmbio automático, escolhendo a marcha mais apropriada para o deslocamento do veículo.",
+        "Motor" : false,
+        "ValorMedio" : 1000
+    },
+    {
+        "Id": 8,
+        "Nome": "Vela de ignição",
+        "Descricao" :"Uma vela de ignição é um dispositivo elétrico que se encaixa à cabeça do cilindro num motor de combustão interna e inflama a mistura comprimida de ar/combustível por meio de uma faísca elétrica. As velas de ignição possuem um eletrodo central isolado o qual se conecta através de um cabo blindado a uma bobina ou magneto externo (que é ligado ao distribuidor), formando, com um terminal aterrado na base da vela, uma folga de ignição dentro do cilindro.",
+        "Motor" : true,
+        "ValorMedio" : 50
+    },
+    {
+        "Id": 9,
+        "Nome": "Cabeçote",
+        "Descricao" :"Cabeça do motor(pt), cabeçote(pt-BR) ou cúpula(pt-AO) é a nomenclatura usada para se referir a parte integrante de um mecanismo. Num motor de combustão interna, cabeça do motor é a tampa de fechamento da parte superior do bloco de cilindros e consiste numa plataforma perfeitamente fresa de modo ajustar-se ao bloco metal a fim de oferecer resistência às explosões. Atualmente a Cabeça do motor é a parte superior da câmara de combustão e onde se localizam as velas e as válvulas de admissão e escape. Entre cabeçote e bloco está a junta de cabeçote.",
+        "Motor" : true,
+        "ValorMedio" : 2000
+    },
+    {
+        "Id": 10,
+        "Nome": "Para-choque",
+        "Descricao" :"Para-choque ou para-choques é uma peça de material resistente colocada horizontalmente na área frontal e na traseira de veículos automotores para amortecer eventuais choques e evitar danos à carroceria",
+        "Motor" : false,
+        "ValorMedio" : 400
+    },
+    {
+        "Id": 11,
+        "Nome": "Para-brisa",
+        "Descricao" :"O para-brisa (pré-AO 1990: pára-brisa) é uma parte do automóvel ou de uma aeronave que o protege contra a chuva, insetos, e contra a força do vento[1], como diz o próprio nome ",
+        "Motor" : false,
+        "ValorMedio" : 500
+    },
+    {
+        "Id": 12,
+        "Nome": "Óleo lubrificante",
+        "Descricao" :"Os óleos lubrificantes, óleos de motor ou óleos para motor são substâncias utilizadas para reduzir o ruído, calor e desgaste, lubrificando e aumentando a vida útil dos componentes móveis dos motores.",
+        "Motor" : true,
+        "ValorMedio" : 400
+    },
+    {
+        "Id": 13,
+        "Nome": "Bateria automotiva",
+        "Descricao" :"Uma bateria automotiva é um tipo de bateria recarregável que fornece energia elétrica para um automóvel.[1] Geralmente isso faz referência a uma bateria SLI (partida, iluminação, ignição) para alimentar o motor de arranque, as luzes e o sistema de ignição do motor de um veículo.",
+        "Motor" : false,
+        "ValorMedio" : 100
+    },
+    {
+        "Id": 14,
+        "Nome": "Chassi",
+        "Descricao" :"Chassi (do francês chassis) é a estrutura de suporte de carga de um objeto artificial, que suporta estruturalmente o objeto em sua construção e função. Pode ser feito de aço, alumínio, ou qualquer outro material rígido.[1] A sua aplicação mais conhecida é em veículos, para sustentar os sistemas embarcados, mas também é utilizado para designar toda a estrutura de suporte de outros equipamentos, como computadores, televisores, colheitadeiras, etc.",
+        "Motor" : false,
+        "ValorMedio" : 3000
+    },
+    {
+        "Id": 15,
+        "Nome": "Retrovisor",
+        "Descricao" :"Um espelho retrovisor (também espelho da porta, ou o espelho lateral) é um espelho encontrado no exterior de veículos automotivos para auxiliar o motorista a enxergar áreas para trás e para os lados do veículo; do lado de fora da visão periférica do condutor ( no chamado ponto cego).",
+        "Motor" : false,
+        "ValorMedio" : 80
+    },
+    {
+        "Id": 16,
+        "Nome": "Radiador",
+        "Descricao" :"Um radiador é um dispositivo utilizado para troca de calor entre o ar atmosférico e outra substância (geralmente um líquido de arrefecimento) contida em um sistema fechado. Seu núcleo é constituído por uma série de canais (em forma de tubos ou de colméia) que permitem a passagem de ar entre eles retirando o calor do líquido, portanto quanto maior a área de contato com o ar mais rápida é a troca e mais eficiente é o radiador. Radiadores são encontrados em qualquer tipo de motor refrigerado à água, o que inclui veículos de todos os tipos; equipamentos pesados como tratores e máquinas agrícolas; motores estacionários de geradores e moto-bombas entre outros.",
+        "Motor" : true,
+        "ValorMedio" : 800
+    },
+    {
+        "Id": 17,
+        "Nome": "Embreagem",
+        "Descricao" :"A embraiagem (português europeu) ou embreagem (português brasileiro) é o mecanismo utilizado em diversos veículos, para transmitir a rotação do volante do motor para as engrenagens da caixa de velocidades que, por sua vez, irá desmultiplicar essa rotação (consoante a engrenagem - ou mudança - selecionada) e transferi-la para o diferencial através do eixo.",
+        "Motor" : true,
+        "ValorMedio" : 800
+    },
+    {
+        "Id": 18,
+        "Nome": "Pastilha de freio",
+        "Descricao" :"Pastilhas de freio é um dos principais componentes de um sistema de freio a disco, utilizado em automóveis, bicicletas e sistemas industriais. A pastilha de freio atua principalmente por meio da fricção contra o aço do disco de freio, que em contato giratório com as pastilhas, efetua a diminuição do giro.",
+        "Motor" : false,
+        "ValorMedio" : 50
+    },
+    {
+        "Id": 19,
+        "Nome": "Escapamento",
+        "Descricao" :"O tubo de escape, ou escapamento no Brasil, é um condutor que possibilita ao automóvel encaminhar os gases do resultado da combustão para fora do ambiente do motor, além de influenciar no desenvolvimento do motor.[1] Geralmente são produzidos com materiais inoxidáveis devido à forte corrosão causada pelos gases, além de materiais filtrantes. Sua aplicação é mais conhecida em automóveis, mas se dá em uso de qualquer motor a explosão, em geradores, embarcações, trens etc.",
+        "Motor" : false,
+        "ValorMedio" : 100
+    },
+    {
+        "Id": 20,
+        "Nome": "Filtro de ar",
+        "Descricao" :"O filtro de ar é um equipamento composto por um corpo metálico ou plástico cujo interior possui o elemento filtrante do ar aspirado pelo motor antes de ser usado na mistura da combustão.",
+        "Motor" : false,
+        "ValorMedio" : 20
+    }
+]

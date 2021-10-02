@@ -3,7 +3,7 @@ let pecas = []
 //Consultando arquivo JSON
 const consultar = () => {
     return new Promise((resolve, reject) => {
-        fetch('cardapio.json')
+        fetch('catalogo.json')
             .then(resp => resp.json())
             .then(data => {
                 data.forEach(i => {
@@ -36,12 +36,16 @@ const zerarPecas = (total) => {
 
 consultar()
     .then(pecas => {
-        const pecasMotor = pecas.filter(f => f.Motor).map(i => ({...i}))
+        const pecasMotor = pecas.filter(f => f.Motor).map(i => ({...i, NomeCompleto : i.NomeDescricao()}))
         console.log(`Peças do motor:`)
-        console.table(pecasMotor.map(i => (Id = i.Id, NomeCompleto = i.NomeDescricao())))
-        let totalPecas = calcularTotal(pecas)
-        console.log(`Valor total das peças: ${totalPecas}`)
-        console.log(`Zerar valor das peças utilizando recursividade: ${zerarPecas(totalPecas)}`)
+        console.table(pecasMotor)
+        let totalPecasMotor = calcularTotal(pecasMotor)
+        console.log(`Valor total das peças motor: ${totalPecasMotor}`)
+        const idsUtilizar = [2,6,8,9]
+        const pecasEspecificas = pecas.filter(f => idsUtilizar.includes(f.Id))
+        console.log('Peças especifícas:')
+        console.table(pecasEspecificas)
+        console.log(`Zerar valor das peças utilizando recursividade: ${zerarPecas(totalPecasMotor)}`)
     })
 
 
