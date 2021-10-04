@@ -36,7 +36,7 @@ const zerarPecas = (total) => {
 
 consultar()
     .then(pecas => {
-        const pecasMotor = pecas.filter(f => f.Motor).map(i => ({...i, NomeCompleto : i.NomeDescricao()}))
+        let pecasMotor = pecas.filter(f => f.Motor).map(i => ({...i, NomeCompleto : i.NomeDescricao()}))
         console.log(`Peças do motor:`)
         console.table(pecasMotor)
         let totalPecasMotor = calcularTotal(pecasMotor)
@@ -46,6 +46,17 @@ consultar()
         console.log('Peças especifícas:')
         console.table(pecasEspecificas)
         console.log(`Zerar valor das peças utilizando recursividade: ${zerarPecas(totalPecasMotor)}`)
+        console.log('-------- CRUD ABAIXO --------')
+        console.log('Inserir dado(via push):')
+        pecasMotor.push({Id : 21, Nome: 'Carburador', Descricao: 'Peça responsável por controlar a injeção de combustível', Motor: true, ValorMedio: 100})
+        console.table(pecasMotor)
+        console.log('Alterar dado: ')
+        let objetoAlterar = pecasMotor.find(f=> f.Id === 21)
+        objetoAlterar.Nome = 'Carburador Alterado'
+        console.table(pecasMotor)
+        console.log('Remover item da lista:')
+        pecasMotor.splice(pecasMotor.indexOf(objetoAlterar, 1))
+        console.table(pecasMotor)
     })
 
 
